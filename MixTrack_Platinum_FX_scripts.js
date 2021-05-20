@@ -9,8 +9,8 @@ MixtrackPlatinumFX = {};
     - HPF & LPF FX buttons remapped to autopan / bitcrush
     - Shift + FX buttons selects focused FX unit + slot
     - "Fader cuts" pad mode remapped to beatjump
-    - Shift + Hotcue mapped to cueloop (from Virtual DJ)
-    - Shift + Sample mapped to key cue / pitch play (from Virtual DJ / Serato DJ Pro)
+    - Shift + Hotcue mapped to cueloop (from Virtual DJ) (not implemented yet)
+    - Shift + Sample mapped to key cue / pitch play (from Virtual DJ / Serato DJ Pro) (not implemented yet)
     - Shift + Play starts/ends slip
     - Shift + Sync toggles quantize
 
