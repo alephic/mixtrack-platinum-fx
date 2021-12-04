@@ -621,7 +621,6 @@
                 <status>0xB0</status>
                 <midino>0x29</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
@@ -632,7 +631,6 @@
                 <status>0xB1</status>
                 <midino>0x29</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
@@ -643,7 +641,6 @@
                 <status>0xB2</status>
                 <midino>0x29</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
@@ -654,7 +651,6 @@
                 <status>0xB3</status>
                 <midino>0x29</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
@@ -1349,7 +1345,6 @@
                 <status>0xB0</status>
                 <midino>0x09</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
@@ -1369,7 +1364,6 @@
                 <status>0xB1</status>
                 <midino>0x09</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
@@ -1389,7 +1383,6 @@
                 <status>0xB2</status>
                 <midino>0x09</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
@@ -1400,7 +1393,6 @@
                 <status>0xB3</status>
                 <midino>0x09</midino>
                 <options>
-                    <invert/>
                     <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
