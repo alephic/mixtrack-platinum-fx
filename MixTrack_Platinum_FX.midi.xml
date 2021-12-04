@@ -621,6 +621,8 @@
                 <status>0xB0</status>
                 <midino>0x29</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
             </control>
@@ -630,6 +632,8 @@
                 <status>0xB1</status>
                 <midino>0x29</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
             </control>
@@ -639,6 +643,8 @@
                 <status>0xB2</status>
                 <midino>0x29</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
             </control>
@@ -648,6 +654,8 @@
                 <status>0xB3</status>
                 <midino>0x29</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-lsb/>
                 </options>
             </control>
@@ -887,7 +895,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x80</status>
                 <midino>0x05</midino>
                 <options>
@@ -905,7 +913,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x81</status>
                 <midino>0x05</midino>
                 <options>
@@ -923,7 +931,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x82</status>
                 <midino>0x05</midino>
                 <options>
@@ -932,7 +940,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x83</status>
                 <midino>0x05</midino>
                 <options>
@@ -995,7 +1003,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x90</status>
                 <midino>0x05</midino>
                 <options>
@@ -1004,7 +1012,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x91</status>
                 <midino>0x05</midino>
                 <options>
@@ -1013,7 +1021,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x92</status>
                 <midino>0x05</midino>
                 <options>
@@ -1022,7 +1030,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>start</key>
+                <key>cue_goto</key>
                 <status>0x93</status>
                 <midino>0x05</midino>
                 <options>
@@ -1341,6 +1349,8 @@
                 <status>0xB0</status>
                 <midino>0x09</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
             </control>
@@ -1359,6 +1369,8 @@
                 <status>0xB1</status>
                 <midino>0x09</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
             </control>
@@ -1377,6 +1389,8 @@
                 <status>0xB2</status>
                 <midino>0x09</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
             </control>
@@ -1386,6 +1400,8 @@
                 <status>0xB3</status>
                 <midino>0x09</midino>
                 <options>
+                    <invert/>
+                    <soft-takeover/>
                     <fourteen-bit-msb/>
                 </options>
             </control>
@@ -3137,7 +3153,7 @@
             </control>
             <control>
                 <group>[Master]</group>
-                <key>MixtrackPlatinumFX.fxMix</key>
+                <key>MixtrackPlatinumFX.fxMeta</key>
                 <status>0xB8</status>
                 <midino>0x04</midino>
                 <options><script-binding/></options>

@@ -573,8 +573,15 @@ MixtrackPlatinumFX.getActiveEffectGroup = function() {
     return "[EffectRack1_EffectUnit"+(MixtrackPlatinumFX.activeFXSlot < 3 ? 1 : 2)+"_Effect"+((MixtrackPlatinumFX.activeFXSlot % 3) + 1)+']';
 };
 
-MixtrackPlatinumFX.fxMix = function(channel, control, value, status, group) {
-    engine.setValue(MixtrackPlatinumFX.getActiveEffectUnitGroup(), 'mix', value/127);
+MixtrackPlatinumFX.fxMeta = function(channel, control, value, status, group) {
+    var effectUnitGroup = MixtrackPlatinumFX.getActiveEffectUnitGroup();
+    var currVal = engine.getValue(effectUnitGroup, 'super1');
+    var newVal = value/128;
+    var spread = Math.abs(currVal-newVal);
+    if (MixtrackPlatinumFX.fxMetaTakeover || spread < 0.07) {
+        engine.setValue(effectUnitGroup, 'super1', newVal);
+        MixtrackPlatinumFX.fxMetaTakeover = true;
+    }
 };
 
 MixtrackPlatinumFX.fxBeats = function(channel, control, value, status, group) {
@@ -588,7 +595,12 @@ MixtrackPlatinumFX.fxButton = function(channel, control, value, status, group) {
     if (value == 0x7f) {
         if (MixtrackPlatinumFX.shifted) {
             var oldFXSlot = MixtrackPlatinumFX.activeFXSlot;
+            var oldUnit = MixtrackPlatinumFX.getActiveEffectUnitGroup();
             MixtrackPlatinumFX.activeFXSlot = control;
+            var newUnit = MixtrackPlatinumFX.getActiveEffectUnitGroup();
+            if (newUnit != oldUnit) {
+                MixtrackPlatinumFX.fxMetaTakeover = false;
+            }
             MixtrackPlatinumFX.updateFXButtonLED(oldFXSlot);
             if (MixtrackPlatinumFX.fxModes[oldFXSlot] != -1) {
                 MixtrackPlatinumFX.updateFXButtonLED(MixtrackPlatinumFX.fxModes[oldFXSlot]);
@@ -657,6 +669,7 @@ MixtrackPlatinumFX.init = function(id, debug) {
     MixtrackPlatinumFX.deckPadLEDConnections = [[],[],[],[]];
     MixtrackPlatinumFX.activeFXSlot = 0;
     MixtrackPlatinumFX.fxModes = [-1, -1, -1, -1, -1, -1];
+    MixtrackPlatinumFX.fxMetaTakeover = false;
 
     for (var deck = 0; deck < 4; ++deck) {
         var deckGroup = MixtrackPlatinumFX.deckGroups[deck];
